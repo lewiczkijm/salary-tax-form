@@ -9,6 +9,41 @@
     font-size: 0.8em;
     color:#a6a6a6
   }
+  .inputsBox { margin: 1.5em 0;}
+  .indented { margin-left: calc(1.25rem + 1em + 13px)}
+  .form-check label { padding-left: 1em}
+  // Кастомизация переключателя из bootstrap
+  .custom-switch-between{
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .custom-control-input:checked~.custom-control-label::before{
+    border-color: #f0a32f;
+    background: #f0a32f;
+  }
+  .custom-switch .custom-control-label::before{
+    width: 2.5rem;
+    border-radius: 1.5rem;
+  }
+  .custom-control-label::before{
+    height: 1.5rem;
+    top:0;
+    border-color: #f0a32f;
+    background: #f0a32f;
+  }
+  .custom-control-label::after{
+    background-color: #ffffff;
+    top: 2px;
+    width: calc(1.5rem - 4px);
+    height: calc(1.5rem - 4px);
+    border-radius: 1.5rem;
+  }
+  .custom-control-input:checked~.custom-control-label::after{
+    top: 2px;
+    left: calc(-2rem + 2px);
+  }
+
   .r{
     font-family: Rouble;
   }

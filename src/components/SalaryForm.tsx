@@ -9,7 +9,7 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
     return (
             <form className={"form-salary"} onSubmit={handleSubmit(console.log)}>
                 <h3>Сумма</h3>
-
+                <div className="inputsBox">
                 <div className="form-check">
                     <Field component={"input"} type="radio" name="salaryCase" id="exampleRadios1"
                            value="option1" />
@@ -38,13 +38,14 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
                             Оплата за час
                         </label>
                 </div>
-                <div><label>Указать с НДФЛ
-                    <div style={{"display":"inline-block"}} className="custom-control custom-switch">
+                </div>
+                <div className="inputsBox indented"><label>Указать с НДФЛ
+                    <div className="custom-control custom-switch custom-switch-between">
                         <Field component="input" type="checkbox" name="NDFL" className="custom-control-input" id="customSwitch1"/>
                         <label className="custom-control-label" htmlFor="customSwitch1"></label>
                     </div>
                     Без НДФЛ</label></div>
-                <div>
+                <div className="inputsBox indented">
                     <Field name="sum" component="input" type="text" id="sum"/><label className="r" htmlFor="sum">c</label>
                 </div>
 
