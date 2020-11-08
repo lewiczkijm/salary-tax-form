@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+// @ts-ignore
+import React from "react";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="custom-control custom-switch">
+          <input type="checkbox" className="custom-control-input" id="customSwitch1"/>
+            <label className="custom-control-label" htmlFor="customSwitch1">Toggle this switch element</label>
+        </div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
