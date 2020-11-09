@@ -2,7 +2,7 @@ import './SalaryForm.scss';
 import React from "react";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import NumberInput from "./NumberInput";
-
+import Info from "./Info";
 
 
 const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
@@ -23,7 +23,7 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
                     <Field component={"input"} type="radio" name="salaryCase" id="exampleRadios2"
                            value="option2"/>
                         <label  htmlFor="exampleRadios2">
-                            МРОТ
+                            МРОТ <Info value="gjglh"/>
                         </label>
                 </div>
                 <div className="form-check">
