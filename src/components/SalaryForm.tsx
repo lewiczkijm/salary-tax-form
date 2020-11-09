@@ -1,11 +1,13 @@
-import '../SalaryForm.scss';
+import './SalaryForm.scss';
 import React from "react";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
+import NumberInput from "./NumberInput";
 
 
 
 const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
     const {handleSubmit, reset} = props;
+
     return (
             <form className={"form-salary"} onSubmit={handleSubmit(console.log)}>
                 <h3>Сумма</h3>
@@ -46,7 +48,7 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
                     </div>
                     Без НДФЛ</label></div>
                 <div className="inputsBox indented">
-                    <Field name="sum" component="input" type="text" id="sum"/><label className="r" htmlFor="sum">c</label>
+                    <Field name="sum" component={NumberInput} type="text" id="sum"/><label className="r" htmlFor="sum">c</label>
                 </div>
 
                 <div>
