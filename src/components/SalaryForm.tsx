@@ -23,8 +23,8 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
                     <Field component={"input"} type="radio" name="salaryCase" id="exampleRadios2"
                            value="option2"/>
                         <label  htmlFor="exampleRadios2">
-                            МРОТ <Info value="gjglh"/>
-                        </label>
+                            МРОТ
+                        </label><Info value="МРОТ - минимальный размер оплаты труда. Разный для разных регионов"/>
                 </div>
                 <div className="form-check">
                     <Field component={"input"} type="radio" name="salaryCase" id="exampleRadios3"

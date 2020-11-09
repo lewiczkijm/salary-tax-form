@@ -11,7 +11,9 @@ const Info:React.FC<InfoProps> = ({value}) =>{
 
     const icons = ['i','x'];
 
-    const showInfo = ()=>{setShow(true)};
+    const showInfo = ()=>{
+        setShow(true);
+    };
     const hideInfo = ()=>{setShow(false)};
 
     const click = (e:React.MouseEvent)=>{
@@ -24,7 +26,10 @@ const Info:React.FC<InfoProps> = ({value}) =>{
             <div onMouseOver={showInfo} onMouseOut={hideInfo} onClick={click} className="icon">
                 <span>{icons[selectedIcon]}</span>
             </div>
-            {(show || fix) && <div>{value}</div>}
+            {(show || fix) && <div className="banner">
+                <div> </div>
+                <div>{value}</div>
+            </div>}
         </div>
     )
 };
