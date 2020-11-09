@@ -9,9 +9,9 @@ import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { reducer as formReducer } from 'redux-form'
 
+const rootReducer = combineReducers({form:formReducer});
 const store = createStore(
-    combineReducers({form:formReducer})
-
+    rootReducer
     ,composeWithDevTools());
 
 
@@ -22,6 +22,9 @@ ReactDOM.render(
   ,
   document.getElementById('root')
 );
+
+export type RootState = ReturnType<typeof rootReducer>
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
