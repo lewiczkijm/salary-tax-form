@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './NumberInput.scss'
+import {separateMoneyValue} from "../util";
 
 interface InputProps {
     input:{
@@ -18,7 +19,7 @@ const NumberInput:React.FC<InputProps> = (props)=>{
         val = val.replace(/[^0-9.]/g,'');
 
         onChange(val);
-        setInnerValue(val.replace(/\B(?=(\d{3})+(?!\d))/g, " "))
+        setInnerValue(separateMoneyValue(val))
     }
     return(<input className="number-input" type="text" value={innerValue} onChange={intercept}/>)
 };

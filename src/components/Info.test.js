@@ -1,7 +1,6 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act, Simulate } from "react-dom/test-utils";
-import NumberInput from "./NumberInput";
 import Info from "./Info";
 
 let container;

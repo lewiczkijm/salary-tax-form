@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 
 import NumberInput from "./NumberInput";
 import Info from "./Info";
+import {separateMoneyValue} from "../util";
 
 
 interface SalaryFormProps {
@@ -15,6 +16,8 @@ interface SalaryFormProps {
 const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
     const {handleSubmit, reset,salaryCase,NDFL,sum}: InjectedFormProps & SalaryFormProps = props;
 
+    const TAX = 13; // Ставка по НДФЛ
+
     //
     let salaryPayed:number,     // Выплачиваемая сумма
         salaryGotten:number,    // Сумма на руки
@@ -23,13 +26,14 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
     // Рассчет с НДФЛ
     if(NDFL){
         salaryGotten = Number(sum);
-        salaryPayed = ~~((salaryGotten * 100)/(100 - 13));
+        // Обратный процент
+        salaryPayed = ~~((salaryGotten * 100)/(100 - TAX));
         NDFLCounted = ~~(salaryPayed - salaryGotten);
     }
     // Рассчет без НДФЛ
     else{
         salaryPayed = Number(sum) ;
-        NDFLCounted = ~~(salaryPayed * (13/100));
+        NDFLCounted = ~~(salaryPayed * (TAX/100));
         salaryGotten = ~~(salaryPayed - NDFLCounted);
     }
 
@@ -77,10 +81,11 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
                     <Field name="sum" component={NumberInput} type="text" id="sum"/><label className="r" htmlFor="sum">c</label>
                 </div>
 
-                {salaryCase === "month" && sum && <div>
-                    <p>{salaryGotten}<span className="r">c</span> сотрудник будет получать на руки</p>
-                    <p>{NDFLCounted}<span className="r">c</span> НДФЛ, 13% от оклада</p>
-                    <p>{salaryPayed}<span className="r">c</span> за сотрудника в месяц</p>
+                {salaryCase === "month" && sum &&
+                <div className="tax-computed">
+                    <p>{separateMoneyValue(salaryGotten)}<span className="r">c</span> сотрудник будет получать на руки</p>
+                    <p>{separateMoneyValue(NDFLCounted)}<span className="r">c</span> НДФЛ, 13% от оклада</p>
+                    <p>{separateMoneyValue(salaryPayed)}<span className="r">c</span> за сотрудника в месяц</p>
                 </div>}
             </form>
 
