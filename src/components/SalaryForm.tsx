@@ -14,7 +14,7 @@ interface SalaryFormProps {
     sum?:string
 }
 const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
-    const {handleSubmit, reset,salaryCase,NDFL,sum}: InjectedFormProps & SalaryFormProps = props;
+    const {handleSubmit,salaryCase,NDFL,sum}: InjectedFormProps & SalaryFormProps = props;
 
     const TAX = 13; // Ставка по НДФЛ
 
@@ -83,9 +83,9 @@ const SalaryForm:React.FC<InjectedFormProps> = (props) =>{
 
                 {salaryCase === "month" && sum &&
                 <div className="tax-computed">
-                    <p>{separateMoneyValue(salaryGotten)}<span className="r">c</span> сотрудник будет получать на руки</p>
-                    <p>{separateMoneyValue(NDFLCounted)}<span className="r">c</span> НДФЛ, 13% от оклада</p>
-                    <p>{separateMoneyValue(salaryPayed)}<span className="r">c</span> за сотрудника в месяц</p>
+                    <p><span className="money-value">{separateMoneyValue(salaryGotten)}<span className="r">c</span></span> сотрудник будет получать на руки</p>
+                    <p><span className="money-value">{separateMoneyValue(NDFLCounted)}<span className="r">c</span></span> НДФЛ, 13% от оклада</p>
+                    <p><span className="money-value">{separateMoneyValue(salaryPayed)}<span className="r">c</span></span> за сотрудника в месяц</p>
                 </div>}
             </form>
 

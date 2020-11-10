@@ -47,4 +47,11 @@
   .r{
     font-family: Rouble;
   }
+  .tax-computed{
+    margin-top: 3em;
+    display: inline-block;
+    padding: 2em;
+    background: #fbf4da;
+    .money-value{ font-weight: bold}
+  }
 }

@@ -120,7 +120,6 @@ describe("Component SalaryForm",()=>{
 
         // Проверяем корректность рассчета налога
 
-        // TODO Поменять форматирование при форматировании вывода цифр
         expect(salaryGotten.textContent).toContain("34 800");
         expect(NDFLCounted.textContent).toContain("5 200");
         expect(salaryPayed.textContent).toContain("40 000");
