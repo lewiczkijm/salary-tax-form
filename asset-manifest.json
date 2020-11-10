@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9b25fdb9.chunk.css",
+    "main.js": "/static/js/main.e355d39a.chunk.js",
+    "main.js.map": "/static/js/main.e355d39a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.21522f5a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.21522f5a.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.b6e1696d.chunk.js": "/static/js/2.b6e1696d.chunk.js",
+    "static/js/2.b6e1696d.chunk.js.map": "/static/js/2.b6e1696d.chunk.js.map",
+    "static/js/3.c8e4a50c.chunk.js": "/static/js/3.c8e4a50c.chunk.js",
+    "static/js/3.c8e4a50c.chunk.js.map": "/static/js/3.c8e4a50c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.9b25fdb9.chunk.css.map": "/static/css/main.9b25fdb9.chunk.css.map",
+    "static/js/2.b6e1696d.chunk.js.LICENSE.txt": "/static/js/2.b6e1696d.chunk.js.LICENSE.txt",
+    "static/media/SalaryForm.scss": "/static/media/rouble.99ca461a.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21522f5a.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.b6e1696d.chunk.js",
+    "static/css/main.9b25fdb9.chunk.css",
+    "static/js/main.e355d39a.chunk.js"
+  ]
+}
